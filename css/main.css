@@ -23,12 +23,15 @@
 }
 
 :root {
-    --primary-colour:  var(--white-colour);
+    --primary-colour:  var(--blue-dark);
     --secondary-colour: #FFC52B;
-    --highlight-colour: #D62828;
-    --white-colour: #fef9e7;
+    --highlight-colour: #cb1d3b;
+    --red-colour: #cb1d3b;
+    --white-colour: #fff;
     --black-colour:  black;
-    --primary-font: 'Karrik';
+    --blue-dark: #0b152f;
+    --grey-colour: #dee6eb;
+    --primary-font: 'Barlow';
     --secondary-font: 'Barlow';
     --border-radius: 10px;
 }
@@ -37,7 +40,7 @@
 html {
     margin: 0;
     max-width: 3000px;
-    background-color: var(--black-colour);
+    background-color: var(--grey-colour);
     scroll-behavior: smooth;
 }
 
@@ -46,12 +49,12 @@ body  {
     font-family: var(--primary-font), sans-serif;
     color: var(--primary-colour);
     margin: 0; padding: 0px;
-    background-color: var(--black-colour);
+    background-color: var(--grey-colour);
     overflow-x: hidden;
 }
 
 ::selection {
-    background: var(--black-colour);
+    background: var(--blue-dark-colour);
     color: var(--white-colour);
   }
 
@@ -81,7 +84,7 @@ p {
     font-family: var(--primary-font), sans-serif;
 }
 
-h1 { font-weight: 800; font-size: 3em; line-height: 1em;}
+h1 { font-weight: 800; font-size: 2.8em; line-height: 1em;}
 
 h2 {font-weight: 800; font-size: 3em; line-height: 1em; margin-top: .2em; margin-bottom: .2em;}
 
@@ -165,8 +168,8 @@ header > .black {
     margin-top: -10px;
     font-size: 4em;
     position: relative;
-    color: var(--black-colour);
-    outline: var(--black-colour);
+    color: var(--white-colour);
+    outline: var(--white-colour);
     z-index: 50;
     transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
                 opacity 0.55s ease;
@@ -180,7 +183,7 @@ header > .black {
   #menuToggle input:checked ~ span
   {
     opacity: 1;
-    color: var(--black-colour);
+    color: var(--primary-colour);
     transform: rotate(135deg);
   }
   
@@ -229,8 +232,8 @@ nav ul {
     right: 0;
     top: 0;
     bottom: 0;
-    background: var(--white-colour);
-    color: var(--black-colour);
+    background: var(--grey-colour);
+    color: var(--blue-dark);
     z-index: 7;
     text-align: left;
     padding-top: 100px;
@@ -253,6 +256,7 @@ nav ul li a {
     text-align: left;
     font-weight: 500;
     font-size: 2rem;
+    text-transform: uppercase;
 }
 
 nav ul li a:hover {
@@ -262,18 +266,18 @@ nav ul li a:hover {
 
 .logo-box {
     position: absolute;
-    left: 4%;
     top: 4%;
+    left: 1.4em;
     width: 300px;
     z-index: 7;
-    color: var(--black-colour);
+    color: var(--primary-colour);
     padding: 0;
     margin: 0;
     transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
 }
 
 .logo-box::before {
-    content: 'Screen Cork';
+    content: url(/images/logo-white.svg);
     font-family: var(--primary-font);
     font-size: 3rem;
     line-height: 2.4rem;
@@ -291,8 +295,10 @@ a > .logo-box:hover {
 }
 
 .logo-box.logo-footer {
+    content: url(/images/logo-colour.svg);
     display: block;
     position: relative;
+    width: 120px;
 }
 
 .logo-footer.logo-box::before {
@@ -426,16 +432,19 @@ a > .logo-box:hover {
     width: 90vw;
     height: 90vh;
     object-fit: contain;
-    background-color: var(--black-colour);
     border-radius: var(--border-radius);
-    overflow: hidden;
     position: relative;
 }
 
 .hero-image img {
-    object-fit: cover;
+    object-fit: fill;
     height: 100%;
     width: 100%;
+}
+
+.hero-image-logo img {
+    height: 90%;
+    width: 90%;
 }
 
 .hero-image-frame::before {
@@ -486,8 +495,8 @@ a > .logo-box:hover {
 .footer {
     width: 100%;
     height: auto;
-    background-color: var(--white-colour);
-    color: var(--black-colour);
+    background-color: var(--grey-colour);
+    color: var(--primary-colour);
     padding: 1em 0 4em 0;
 }
 
@@ -639,23 +648,23 @@ a > .logo-box:hover {
 
 .button.button-filled {
     background-color: var(--white-colour);
-    color: var(--black-colour);
-    border: var(--black-colour);
+    color: var(--primary-colour);
+    border: var(--primary-colour);
 }
 
 .button-filled:hover {
     -webkit-transition: 0.4s ease;
     transition: 0.4s ease;
-    background-color: var(--black-colour);
+    background-color: var(--primary-colour);
     color: var(--white-colour);
-    border-color: var(--black-colour);
+    border-color: var(--primary-colour);
 }
 
 .button-white:hover {
     -webkit-transition: 0.4s ease;
     transition: 0.4s ease;
     background-color: var(--white-colour);
-    color: var(--black-colour);
+    color: var(--primary-colour);
     border-color: var(--white-colour);
 }
 
@@ -668,7 +677,7 @@ a > .logo-box:hover {
     content: '';
     -webkit-mask: url(/images/arrow-small-light.svg) no-repeat 50% 50%;
     mask: url(/images/arrow-small-light.svg) no-repeat 50% 50%;
-    background-color: var(--black-colour);
+    background-color: var(--primary-colour);
       display: inline-block;
       width: 14px;
       height: 14px;
@@ -836,7 +845,7 @@ a > .logo-box:hover {
         mask: url(/images/icon-heart.svg) no-repeat 50% 50%;}
 
         .icon-black::after {
-            background-color: var(--black-colour);
+            background-color: var(--primary-colour);
         }
         
         .icon-white::after {
@@ -860,6 +869,30 @@ a > .logo-box:hover {
         
 
 
+.highlight-box {
+    display: block;
+    position: relative;
+    width: 400px;
+    height: 400px;
+    max-width: 100%;
+    background-color: var(--black-colour);
+}
+
+.highlight-box-text {
+    position: absolute;
+    bottom: 12%;
+    left: 5%;
+    transition: all .3s;    
+    padding: 1em;
+}
+
+.home-text {
+    position: absolute;
+    bottom: 10%;
+    max-width: 800px;
+}
+.red {background-color: var(--red-colour)!important; color: var(--white-colour);}
+.blue {background-color: var(--blue-dark)!important; color: var(--white-colour);}
 
 @media only screen and (min-width: 650px) { 
     .hide-desktop {
@@ -910,7 +943,7 @@ a > .logo-box:hover {
     }
 
     nav ul li a {
-        color: var(--black-colour);
+        color: var(--white-colour);
         background-color: inherit;
         text-align: center;
         margin-bottom: 0;
@@ -919,7 +952,7 @@ a > .logo-box:hover {
         padding: 0 25px 0 25px;
         border-style: solid;
         border-width: 2px;
-        border-color: var(--black-colour);
+        border-color: var(--primary-colour);
         border-radius: var(--border-radius);  
     }
 
@@ -929,15 +962,15 @@ a > .logo-box:hover {
     }
 
     nav ul li a:hover {
-        background-color: var(--black-colour);
-        color: var(--white-colour);
+        background-color: var(--white-colour);
+        color: var(--blue-dark);
         text-decoration: none;
-        border-color: var(--black-colour);
+        border-color: var(--primary-colour);
     }
 
     nav.black ul li a:hover{
         background-color: var(--white-colour);
-        color: var(--black-colour);
+        color: var(--primary-colour);
         text-decoration: none;
         border-color: var(--white-colour);
     }
