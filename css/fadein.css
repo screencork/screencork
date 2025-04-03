@@ -1,0 +1,220 @@
+.fadeUp {
+opacity: 0;
+transform: translate(0, 40px); transition: all 1.5s;
+}
+
+.fadeIn {
+  opacity: 0;
+  transition: all 1.5s;
+  }
+
+.fadeUpDelayed {
+  opacity: 0;
+  transform: translate(0, 40px); transition: all 1.5s;
+  -webkit-transition-delay: 500ms;
+  -moz-transition-delay: 500ms;
+  -o-transition-delay: 500ms;
+  transition-delay: 500ms;
+  
+}
+
+.fadeUp.visible {
+opacity: 1;
+transform: translate(0, 0); 
+}
+
+.fadeIn.visible {
+  opacity: 1;
+}
+
+.fadeUpDelayed.visible {
+  opacity: 1;
+  transform: translate(0, 0); 
+}
+
+
+
+.fadeLeft {
+  opacity: 0;
+  transform: translate(40px, 0); transition: all 1.5s;
+}
+
+.fadeLeft.visible {
+  opacity: 1;
+  transform: translate(0, 0); 
+}
+
+.fadeRight {
+  opacity: 0;
+  transform: translate(-40px, 0); transition: all 1.5s;
+}
+
+.fadeRight.visible {
+  opacity: 1;
+  transform: translate(0, 0); 
+}
+
+.heroFade {
+  animation: fadein 2s;
+}
+@keyframes fadein {
+  from { opacity: 0}
+  to   { opacity: 1}
+}
+
+.heroFadeUp {
+  animation: heroFadeUp 2s;
+}
+@keyframes heroFadeUp {
+  from { opacity: 0; transform: translate(0, 40px); }
+  to   { opacity: 1; transform: translate(0,0);}
+}
+
+.heroFadeRight {
+  animation: heroFadeRight 2s;
+
+}
+@keyframes heroFadeRight {
+  from { opacity: 0; transform: translate(-40px, 0); }
+  to   { opacity: 1; transform: translate(0,0);}
+}
+
+.heroFadeDelayed {
+  animation: fadeinDelayed 2.5s;
+}
+@keyframes fadeinDelayed {
+  from { opacity: 0; transform: translate(0, 40px); }
+  to   { opacity: 1; transform: translate(0,0);}
+}
+
+.truckRoll {
+  opacity: 0;
+  transform: translate(80px, 0); transition: all 1.5s;
+}
+
+.truckRoll.visible {
+  opacity: 1;
+  transform: translate(0, 0); 
+}
+
+.heroShapeFade {
+  animation: heroShapeFade 3s;
+  overflow: hidden;
+}
+
+@keyframes heroShapeFade {
+  0% {clip-path: inset(50% 50% 50% 50% round 2%);}
+  20% {clip-path: inset(48% 35% 48% 35% round 2%);}
+  80% {clip-path: inset(0 0 0 0 round 1%);}
+  100% {clip-path: inset(0 0 0 0 round 0%);}
+}
+
+.heroShapeFade2 {
+  animation: heroShapeFade2 2s;
+  overflow: hidden;
+}
+
+@keyframes heroShapeFade2 {
+  0% {clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);}
+  40% {clip-path: polygon(0 0, 65% 0, 85% 100%, 0 100%);}
+  100% {clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);}
+}
+
+
+.shapeFade {
+  overflow: hidden;
+}
+
+.shapeFade.visible {
+  animation: shapeFade 2s forwards;
+}
+
+@keyframes shapeFade {
+  0% {clip-path: inset(50% 50% 50% 50% round 2%);}
+  20% {clip-path: inset(10% 48% 10% 48% round 2%);}
+  80% {clip-path: inset(0 0 0 0 round 1%);}
+  100% {clip-path: inset(0 0 0 0 round 0%);}
+}
+
+.shapeFade2 {
+  overflow: hidden;
+}
+
+.shapeFade2.visible {
+  animation: shapeFade2 2s forwards;
+}
+
+@keyframes shapeFade2 {
+  0% {clip-path: inset(50% 50% 50% 50% round 2%);}
+  20% {clip-path: inset(48% 35% 48% 35% round 2%);}
+  80% {clip-path: inset(0 0 0 0 round 1%);}
+  100% {clip-path: inset(0 0 0 0 round 0%);}
+}
+
+.shapeCircle {
+  animation: shapeCircle 0%;
+}
+
+.shapeCircle.visible {
+  animation: shapeCircle 2s forwards;
+}
+
+@keyframes shapeCircle {
+  0% {clip-path: circle(0% at 50% 50%);}
+  20% {clip-path: circle(20% at 50% 50%);}
+  80% {clip-path: circle(80% at 50% 50%);}
+  100% {clip-path: circle(100% at 50% 50%);}
+}
+
+
+
+
+[data-animate] {
+  line-height: 1em;
+}
+[data-animate] > span {
+  display: inline-block;
+  height: 1.2em;
+  overflow: hidden;
+}
+
+[data-animate] > span > span {
+  display: none;
+  animation: 1.4s;
+  animation-fill-mode: backwards;
+}
+[data-animate].show > span > span {
+  display: inline-block;
+}
+
+.visible[data-animate=slideup] > span > span {
+  animation-name: slideUp;
+}
+
+[data-animate=zoomin] > span > span {
+  animation-name: zoomIn;
+}
+
+[data-animate=slidedown] > span > span {
+  animation-name: slideDown;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translate(0, 1.2em);
+  }
+}
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+}
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translate(0, -1.2em);
+  }
+}
+
