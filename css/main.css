@@ -298,6 +298,8 @@ a > .logo-box:hover {
     display: block;
     position: relative;
     width: 120px;
+    text-align: left;
+    left: 0;
 }
 
 .logo-footer.logo-box::before {
