@@ -101,7 +101,6 @@ h3 { font-weight: 500; font-size: 2em;}
     transform: translate(110%,0);
     height: 100%;
     box-shadow: 3px 4px 8px 3px rgba(0, 0, 0, 0.1);
-    border-radius: 10%;
 }
 
 .hide-mobile li {
@@ -831,6 +830,18 @@ a > .logo-box:hover {
         padding: 2em;
     }
 
+    .logo {
+        height: 40px;
+        width: 40px;
+        margin: auto;
+    }
+
+    .logo img {
+        width: 100%;
+        height: 100%;
+        text-align: center;
+    }
+
     .icon::after {
         width: 32px;
         height: 32px;
@@ -844,8 +855,14 @@ a > .logo-box:hover {
     .icon-heart::after { -webkit-mask: url(/images/icon-heart.svg) no-repeat 50% 50%;
         mask: url(/images/icon-heart.svg) no-repeat 50% 50%;}
 
+    .icon-insta::after { -webkit-mask: url(/images/icon-instagram.svg) no-repeat 50% 50%;
+    mask: url(/images/icon-instagram.svg) no-repeat 50% 50%;}
+
         .icon-black::after {
             background-color: var(--primary-colour);
+        }
+        .icon-clear::after {
+            background-color: none;
         }
         
         .icon-white::after {
@@ -893,6 +910,7 @@ a > .logo-box:hover {
 }
 .red {background-color: var(--red-colour)!important; color: var(--white-colour);}
 .blue {background-color: var(--blue-dark)!important; color: var(--white-colour);}
+.underline {text-decoration: underline;}
 
 @media only screen and (min-width: 650px) { 
     .hide-desktop {
