@@ -84,7 +84,7 @@ p {
     font-family: var(--primary-font), sans-serif;
 }
 
-h1 { font-weight: 800; font-size: 2.8em; line-height: 1em;}
+h1 { font-weight: 800; font-size: 2.4em; line-height: 1em;}
 
 h2 {font-weight: 800; font-size: 3em; line-height: 1em; margin-top: .2em; margin-bottom: .2em;}
 
@@ -286,6 +286,7 @@ nav ul li a:hover {
     cursor: pointer;
     z-index: 10;
     transition: all 1s;
+    max-width: 50%;
 }
 
 a > .logo-box:hover {
@@ -700,7 +701,8 @@ a > .logo-box:hover {
 }
 
 .white.button-arrow::after {background-color: var(--white-colour);}
-  
+.button-white.button-arrow::after{background-color: var(--white-colour);} 
+.button-white.button-arrow:hover::after {background-color: var(--primary-colour);}
 
 
 .center {
@@ -893,7 +895,8 @@ a > .logo-box:hover {
     position: relative;
     width: 400px;
     height: 400px;
-    max-width: 100%;
+    max-width: 80vw;
+    margin: auto;
     background-color: var(--black-colour);
 }
 
