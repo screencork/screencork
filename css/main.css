@@ -175,7 +175,7 @@ header > .black {
   }
 
   .black #menuToggle span {
-    color: var(--white-colour);
+    color: var(--primary-colour);
   }
   
   
@@ -265,8 +265,8 @@ nav ul li a:hover {
 
 .logo-box {
     position: absolute;
-    top: 4%;
-    left: 1.4em;
+    top: 40px;
+    left: 2em;
     width: 300px;
     z-index: 7;
     color: var(--primary-colour);
