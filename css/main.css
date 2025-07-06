@@ -295,7 +295,7 @@ nav ul li a:hover {
     overflow: hidden;
 }
     .logo-box-PNG::before {
-    background-image: url('/images/logo-transparent-white.png');
+    background-image: url('/images/logo-transparent-white.webp');
     background-size: cover;
     display: block;
     width: 100%; 
@@ -321,7 +321,7 @@ nav ul li a:hover {
 }
 
 .black.logo-box::before{content: url(/images/logo-colour.svg);}
-.black.logo-box-PNG::before{background-image: url('/images/logo-transparent.png');}
+.black.logo-box-PNG::before{background-image: url('/images/logo-transparent.webp');}
 
 a > .logo-box:hover {
     opacity: .5;
@@ -329,7 +329,7 @@ a > .logo-box:hover {
 }
 
 .logo-box.logo-footer {
-    content: url(/images/logo-transparent.png);
+    content: url(/images/logo-transparent.webp);
     display: block;
     position: relative;
     width: 100px;
